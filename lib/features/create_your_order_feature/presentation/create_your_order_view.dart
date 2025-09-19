@@ -67,7 +67,7 @@ class _CreateYourOrderViewState extends State<CreateYourOrderView> {
                 onCalsChanged: (c) => setState(() => carbCals = c),
                 // onPriceChanged: (p) => setState(() => carbPrice = p),
               ),
-              const SizedBox(height: 120),
+              const SizedBox(height: 130),
             ],
           ),
         ),
