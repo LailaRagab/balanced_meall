@@ -1,4 +1,4 @@
-# balanced_meall
+# BalancedMeal
 
 A new Flutter project.
 

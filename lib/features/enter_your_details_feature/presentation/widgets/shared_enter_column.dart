@@ -26,9 +26,6 @@ class SharedEnterColumn extends StatelessWidget {
       children: [
         const SizedBox(height: 24),
         SharedEnterText(text: text),
-        const SizedBox(height: 10),
-        SizedBox(height: 24),
-        SharedEnterText(text: text),
         SizedBox(height: 10),
         Container(
           decoration: BoxDecoration(
@@ -40,10 +37,15 @@ class SharedEnterColumn extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
             child: TextField(
               controller: controller,
-              onChanged: onChanged, // 🟠 notify parent of changes
+              onChanged: onChanged,
               decoration: InputDecoration(
+                border: InputBorder.none,
+                hint: Text(textFieldHint),
                 suffixIcon: Padding(
-                  padding: const EdgeInsets.only(right: 8.0),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 14,
+                  ),
                   child: Text(
                     suffixText,
                     style: AppStyles.font16White.copyWith(

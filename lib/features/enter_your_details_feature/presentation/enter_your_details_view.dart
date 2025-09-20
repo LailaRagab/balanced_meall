@@ -33,7 +33,7 @@ class _EnterYourDetailsViewState extends State<EnterYourDetailsView> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: AppColors.kBgNextButtonColor,
+        backgroundColor: AppColors.kBgScreens,
         appBar: AppBarShared(
           onPressed: () {
             GoRouter.of(context).pop();
@@ -41,7 +41,12 @@ class _EnterYourDetailsViewState extends State<EnterYourDetailsView> {
           title: 'Enter Your Details',
         ),
         body: Padding(
-          padding: const EdgeInsets.only(top: 31, left: 24, right: 24),
+          padding: const EdgeInsets.only(
+            top: 31,
+            left: 24,
+            right: 24,
+            bottom: 34,
+          ),
           child: SingleChildScrollView(
             // lets the user drag to dismiss keyboard on iOS/Android
             keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
