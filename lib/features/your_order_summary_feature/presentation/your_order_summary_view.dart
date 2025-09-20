@@ -54,7 +54,6 @@ class _YourOrderSummaryViewState extends State<YourOrderSummaryView> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                // 👉 فى نسخة الإنتاج بَنِى هذه القائمة ديناميكيًّا من حالة التطبيق
                 SummaryOfOrderCard(
                   name: 'Bell Pepper',
                   calPerUnit: 12,
@@ -63,23 +62,31 @@ class _YourOrderSummaryViewState extends State<YourOrderSummaryView> {
                   onSummaryChanged:
                       ({required items, required price, required totalCals}) {},
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: 12),
+                SummaryOfOrderCard(
+                  name: 'Lean Beaf',
+                  calPerUnit: 12,
+                  pricePerUnit: 12,
+                  imagePath: AppImages.meat1,
+                  onSummaryChanged:
+                      ({required items, required price, required totalCals}) {},
+                ),
+                SizedBox(height: 12),
+                SummaryOfOrderCard(
+                  name: 'Sweet Corn',
+                  calPerUnit: 12,
+                  pricePerUnit: 12,
+                  imagePath: AppImages.carbon1,
+                  onSummaryChanged:
+                      ({required items, required price, required totalCals}) {},
+                ),
               ],
             ),
           ),
         ),
-        bottomNavigationBar: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: PlaceOrderContainer(
-            enabled: true,
-            currentCals: currentCals,
-            maxCals: CalculateMaxiCals().calculateUserCals(),
-            totalPrice: totalPrice.toDouble(),
-            vegList: [],
-            meatList: [],
-            carbList: [],
-            buttonText: 'Confirm',
-          ),
+        bottomNavigationBar: PlaceOrderContainer(
+          enabled: true,
+          buttonText: 'Confirm',
         ),
       ),
     );

@@ -11,8 +11,8 @@ class CarbsColumn extends StatefulWidget {
     required this.onCalsChanged,
   });
 
-  final ValueChanged<int> onTotalChanged; // إجمالي كمّيّات الكربوهيدرات
-  final ValueChanged<int> onCalsChanged; // إجمالي سعراتها
+  final ValueChanged<int> onTotalChanged;
+  final ValueChanged<int> onCalsChanged;
 
   @override
   State<CarbsColumn> createState() => _CarbsColumnState();

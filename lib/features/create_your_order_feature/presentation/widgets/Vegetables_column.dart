@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:balanced_meal/core/utils/assets/images/app_images.dart';
+import '../../../../core/utils/assets/app_styles/app_styles.dart';
+import '../../../../core/utils/assets/colors/app_colors.dart';
 import 'category_card.dart';
 
 class VegetablesColumn extends StatefulWidget {
@@ -47,10 +49,14 @@ class _VegetablesColumnState extends State<VegetablesColumn> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text("Vegetables", style: TextStyle(fontSize: 18)),
+        Text(
+          "Vegetables",
+          style: AppStyles.font16White.copyWith(
+            color: AppColors.kAxisScrollViewTitle,
+            fontSize: 20,
+          ),
+        ),
         const SizedBox(height: 15),
-
-        /// شريط أفقي بكل كروت الخضار
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
@@ -75,7 +81,6 @@ class _VegetablesColumnState extends State<VegetablesColumn> {
                 onCaloriesChanged: (c) => _onCardCalsChanged(1, c),
               ),
               const SizedBox(width: 12),
-              // أضف كروتًا أخرى مع index = 2,3,...
             ],
           ),
         ),

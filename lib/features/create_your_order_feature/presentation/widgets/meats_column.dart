@@ -55,8 +55,6 @@ class _MeatsColumnState extends State<MeatsColumn> {
           ),
         ),
         const SizedBox(height: 15),
-
-        /// شريط الكروت الأفقي
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
@@ -84,8 +82,6 @@ class _MeatsColumnState extends State<MeatsColumn> {
                 onCaloriesChanged: (c) => _onCardCalsChanged(1, c),
               ),
               const SizedBox(width: 12),
-
-              // يمكنك إضافة المزيد بنفس الأسلوب مع index = 2,3,...
             ],
           ),
         ),

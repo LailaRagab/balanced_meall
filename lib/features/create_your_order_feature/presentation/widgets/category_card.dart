@@ -10,8 +10,8 @@ class CategoryCard extends StatefulWidget {
     required this.image,
     required this.name,
     required this.price,
-    required this.cal, // نصّ يُعرَض فقط
-    required this.calPerUnit, // ← سعرات كل وحدة
+    required this.cal,
+    required this.calPerUnit,
     required this.onQuantityChanged,
     required this.onCaloriesChanged,
   });
@@ -22,10 +22,8 @@ class CategoryCard extends StatefulWidget {
   final String cal;
   final int calPerUnit;
 
-  /// 🔔 يُبلِّغ الأب بالكمية
   final ValueChanged<int> onQuantityChanged;
 
-  /// 🔔 يُبلِّغ الأب بالسعرات الحالية (quantity × calPerUnit)
   final ValueChanged<int> onCaloriesChanged;
 
   @override
@@ -62,9 +60,12 @@ class _CategoryCardState extends State<CategoryCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.kWhite,
       width: 183,
       height: 196,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        color: AppColors.kWhite,
+      ),
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Column(
         children: [
@@ -117,7 +118,7 @@ class _CategoryCardState extends State<CategoryCard> {
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppColors.primaryColor,
-                      minimumSize: const Size(100, 32),
+                      minimumSize: Size(65, 32),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),

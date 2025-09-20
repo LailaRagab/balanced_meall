@@ -14,16 +14,17 @@ class SummaryItemNameAndCals extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          "Bell Pepper",
+          name,
           style: AppStyles.font16WhiteRegular.copyWith(
             color: AppColors.kAxisScrollViewTitle,
           ),
         ),
         Text(
-          "12 Cal",
+          "$cal Cal",
           style: AppStyles.font16WhiteRegular.copyWith(
             color: AppColors.kLightGrey,
             fontSize: 14,

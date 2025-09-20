@@ -70,7 +70,7 @@ class _EnterYourDetailsViewState extends State<EnterYourDetailsView> {
                 ),
                 SharedEnterColumn(
                   text: 'Age',
-                  textFieldHint: 'Enter your Age',
+                  textFieldHint: 'Enter your age in years',
                   suffixText: '',
                   controller: ageController,
                   onChanged: (_) => setState(() {}),

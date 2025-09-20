@@ -18,7 +18,6 @@ class SummaryOfOrderCard extends StatefulWidget {
   final int pricePerUnit;
   final String imagePath;
 
-  /// callback المبسَّط
   final void Function({
     required List<Map<String, dynamic>> items,
     required int price,
