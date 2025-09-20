@@ -8,7 +8,7 @@ class AppColors {
   static Color kLightGrey = Color(0XFF959595);
   static Color kBorderColor = Color(0XFFEAECF0);
   static Color kBgNextButtonColor = Color(0XFFEAECF0);
-  static Color kBgScreens = Color(0XFFFBFBFB);
+  static Color kBgScreens = Color(0XFFD9D9D9);
   static Color kAxisScrollViewTitle = Color(0XFF1E1E1E);
   static Color kBgEnterYourDetailsScreen = Color(0XFFFBFBFB);
 }
